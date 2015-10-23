@@ -30,7 +30,8 @@ function kakunin() {
     swal({   
         title: "HTML <small>Title</small>!",   
         text: "<textarea type=\"text\" tabIndex=\"3\" ></textarea>\n",   
-        html: true 
+        html: true,
+        animation: false
     });
                                         
     /*swal({   
