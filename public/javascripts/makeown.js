@@ -29,8 +29,7 @@ function kakunin() {
     
     swal({   
         title: "HTML <small>Title</small>!",   
-        text: "<textarea type=\"text\" tabIndex=\"3\" class=\"input-text\"  style=\"
-    font-size: 16px !important;\"></textarea>\n",   
+        text: "<textarea type=\"text\" tabIndex=\"3\" class=\"input-text\"  style=\"font-size: 16px !important;\"></textarea> \n",   
         html: true,
         animation: false
     });
