@@ -26,8 +26,14 @@ $(document).ready(function() {
 });
 	
 function kakunin() {
-                                            
+    
     swal({   
+        title: "HTML <small>Title</small>!",   
+        text: "<textarea type=\"text\" tabIndex=\"3\" ></textarea>\n",   
+        html: true 
+    });
+                                        
+    /*swal({   
         title: "Invitation!",   
         text: "Put the below button or Write your information:",   
         type: "input",   
@@ -42,6 +48,6 @@ function kakunin() {
                          return false  
                 }      
                 swal("Nice!", "You wrote: " + inputValue, "success"); 
-        });
+        });*/
 };
 
