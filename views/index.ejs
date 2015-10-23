@@ -14,6 +14,8 @@
 	<link rel="stylesheet" href="../public/assets/css/bootstrap.min.css">
 	<link rel="stylesheet" href="../public/assets/css/font-awesome.min.css">
 
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+          
 	<!-- Custom styles for our template -->
 	<link rel="stylesheet" href="../public/assets/css/bootstrap-theme.css" media="screen" >
 	<link rel="stylesheet" href="../public/assets/css/main.css">
@@ -22,7 +24,12 @@
 	<!--[if lt IE 9]>
 	<script src="../public/assets/js/html5shiv.js"></script>
 	<script src="../public/assets/js/respond.min.js"></script>
-	<![endif]-->
+	<!-- [endif]-->
+	
+	<!-- <script src="../public/javascripts/lib/sweetalert.min.js"></script>-->
+	<script src="../public/javascripts/lib/sweetalert-dev.js"></script>
+          <link rel="stylesheet" type="text/css" href="../public/javascripts/lib/sweetalert.css">
+          <script src="../public/javascripts/makeown.js"></script>
 </head>
 
 <body class="home">
@@ -45,7 +52,7 @@
 							<li class="active"><a href="sidebar-right.html">Right Sidebar</a></li>
 						</ul>
 					</li>-->
-					<li><a href="contact.html">Application</a></li>
+					<li><a href="contact.html" onclick="">Application</a></li>
 					<!--<li><a class="btn" href="signin.html">SIGN IN / SIGN UP</a></li>-->
 				</ul>
 			</div><!--/.nav-collapse -->
@@ -82,6 +89,8 @@
 		<form action="/appform" method="GET">
 		    <input type="submit" class="btn btn-primary btn-lg" value="APPLICATION FORM" />
 		</form>
+		    
+		  <input type="" class="btn btn-primary btn-lg" value="APPLICATION FORM" onClick="kakunin()" />
 		
 		<!--<div class="row">
 			<div class="col-sm-6">
