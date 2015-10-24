@@ -19,17 +19,9 @@
 	<!-- Custom styles for our template -->
 	<link rel="stylesheet" href="../public/assets/css/bootstrap-theme.css" media="screen" >
 	<link rel="stylesheet" href="../public/assets/css/main.css">
-
-	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-	<!--[if lt IE 9]>
-	<script src="../public/assets/js/html5shiv.js"></script>
-	<script src="../public/assets/js/respond.min.js"></script>
-	<!-- [endif]-->
 	
-	<!-- <script src="../public/javascripts/lib/sweetalert.min.js"></script>-->
-	<script src="../public/javascripts/lib/sweetalert-dev.js"></script>
-          <link rel="stylesheet" type="text/css" href="../public/javascripts/lib/sweetalert.css">
-          <script src="../public/javascripts/makeown.js"></script>
+          <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.min.css">
+          
 </head>
 
 <body class="home">
@@ -61,22 +53,11 @@
 	<!-- /.navbar -->
 
 	<!-- Header -->
-	<!--<header id="head">
-		<div class="container">
-			<div class="row">-->
-			        <!-- Animation-start -->
-			        <div style="margin-top:100px">	
-			            <iframe id="html5fadef91cf63f6f3badd5118db4d859bb5bc53ec8c324" src="../html5/animation/animation.html" width="100%" height="400" frameborder="0" scrolling="no" allowTransparency="true"></iframe>
-			        </div>
-			        <!-- Animation-end -->
-				<!--<h1 class="lead">AWESOME, CUSTOMIZABLE, FREE</h1>
-				<p class="tagline">PROGRESSUS: free business bootstrap template by <a href="http://www.gettemplate.com/?utm_source=progressus&amp;utm_medium=template&amp;utm_campaign=progressus">GetTemplate</a></p>
-				<p><a class="btn btn-default btn-lg" role="button">MORE INFO</a> <a class="btn btn-action btn-lg" role="button">DOWNLOAD NOW</a></p>-->
-			<!--</div>
-		</div>
-	</header>-->
-	<!-- /Header -->
-
+	<!-- Animation-start -->
+	<div style="margin-top:100px">	
+	        <iframe id="html5fadef91cf63f6f3badd5118db4d859bb5bc53ec8c324" src="../html5/animation/animation.html" width="100%" height="400" frameborder="0" scrolling="no" allowTransparency="true"></iframe>
+	</div>
+	<!-- /Header -->          
         	 <div class="container text-center">
 		<h2 class=" top-space">Application Form<br>
 		参加申込フォーム</h2>
@@ -86,36 +67,58 @@
                              を入力してください。ご協力お願いいたします。
 		</p>
 		<br>
-		<form action="/appform" method="GET">
+		<!--<form action="/appform" method="GET">
 		    <input type="submit" class="btn btn-primary btn-lg" value="APPLICATION FORM" />
-		</form>
-		    
-		  <input type="" class="btn btn-primary btn-lg" value="APPLICATION FORM" onClick="kakunin()" />
+		</form>-->
 		
-		<!--<div class="row">
-			<div class="col-sm-6">
-				<h3>Can I use it to build a site for my client?</h3>
-				<p>
-					Yes, you can. You may use this template for any purpose, just don't forget about the <a href="http://creativecommons.org/licenses/by/3.0/">license</a>, 
-					which says: "You must give appropriate credit", i.e. you must provide the name of the creator and a link to the original template in your work. 
-				</p>
-			</div>
-			<div class="col-sm-6">
-				<h3>Can you customize this template for me?</h3>
-				<p>Yes, I can. Please drop me a line to sergey-at-pozhilov.com and describe your needs in details. Please note, my services are not cheap.</p>
-			</div>
-		</div> -->
-		<!-- /row -->
-
-		<!--<div class="jumbotron top-space">
-			<h4>Dicta, nostrum nemo soluta sapiente sit dolor quae voluptas quidem doloribus recusandae facere magni ullam suscipit sunt atque rerum eaque iusto facilis esse nam veniam incidunt officia perspiciatis at voluptatibus. Libero, aliquid illum possimus numquam fuga.</h4>
-     		          <p class="text-right"><a class="btn btn-primary btn-large">Learn more »</a></p>
-  		</div>-->
+		<!--Call your modal-->
+		    <a id="appform" class="btn btn-primary btn-lg" href="#modal-02">APPLICATION FORM</a>
+		
+		    <!--DEMO02-->
+        	              <div id="modal-02">
+	            	<!--"THIS IS IMPORTANT! to close the modal, the class name has to match the name given on the ID-->
+		            <div id="btn-close-modal closebt-container" class="close-animatedModal close-modal-02 close-lightSpeedIn">
+                                    <img id="image" class="closebt" src="../public/images/closebt.svg">
+                                </div>
+		            <!--<div  id="btn-close-modal" class="close-animatedModal close-modal-02"> 
+		                CLOSE MODAL
+		            </div>-->
+		            
+		            <div class="">
+		                    <br>
+		                   <!--Your modal content goes here-->
+		                   <form class="form-horizontal" action="/appform" method="GET">
+		                               <div class="form-group">
+					        <input type="submit" class="btn btn-primary btn-lg" value="Join with Facebook" style="background-image:linear-gradient(to bottom, #1D1D1D 0%, #1527F9 100%); !important" />
+					  </div>
+					  <div class="form-group">
+					    <label for="inputName" class="col-sm-2 control-label">Name</label>
+					    <div class="col-sm-8">
+					      <input type="Name" class="form-control" id="inputName" placeholder="Name">
+					    </div>
+					  </div>
+					  <div class="form-group">
+					    <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+					    <div class="col-sm-8">
+					      <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+					    </div>
+					  </div>
+					  <div class="form-group">
+					    <label for="inputPassword3" class="col-sm-2 control-label">Message</label>
+					    <div class="col-sm-8">
+					      <textarea class="form-control" rows="3"></textarea>
+					    </div>
+					  </div>
+					  <div class="form-group">
+					        <input type="submit" class="btn btn-primary btn-lg" value="APPLY" style="background-image:linear-gradient(to bottom, #1B1B1B 0%, #E6D7D7 100%); !important" />
+					  </div>
+			          </form>
+		            </div>
+		     </div>
             </div>	
             <!-- /container -->
 
 
-		
 	<!-- Highlights - jumbotron -->
 	<div class="jumbotron top-space">
 		<div class="container">
@@ -264,5 +267,7 @@
 	<script src="../public/assets/js/headroom.min.js"></script>
 	<script src="../public/assets/js/jQuery.headroom.min.js"></script>
 	<script src="../public/assets/js/template.js"></script>
+	<script src="../public/javascripts/lib/animatedModal.min.js"></script>
+	<script src="../public/javascripts/makeown.js"></script>
 </body>
 </html>

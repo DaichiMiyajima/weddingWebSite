@@ -1,28 +1,13 @@
 $(document).ready(function() {
-	$.ajax({
-    	url  : "/groupchat",
-    	type : "get",
-		async:false,
-    	success : function(responses) {
-		    _delete_element("reply_comment_rireki_article");
-			var article = document.querySelector('#reply_comment_rireki_article');
-			var li;
-			for (var i=0 ; i < responses.length ; i++){
-			  h3 = document.createElement("h3");
-			  var section = document.createElement("section");
-			  var p = document.createElement("p");
-			  h3.textContent = responses[i].userName;
-			  p.textContent = responses[i].groupChat;
-			  article.appendChild(h3);
-			  article.appendChild(section);
-			  section.appendChild(p);
-			}
-			
-    	},
-    	error : function(){
-        
-    	}
-	});	
+	$('#myContainer').multiscroll({
+            	sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE'],
+            	anchors: ['first', 'second', 'third'],
+            	menu: '#menu',
+            	navigation: true,
+            	navigationTooltips: ['One', 'Two', 'Three'],
+            	loopBottom: true,
+            	loopTop: true
+            });
 });
 	
 function kakunin() {
@@ -51,4 +36,30 @@ function kakunin() {
                 swal("Nice!", "You wrote: " + inputValue, "success"); 
         });*/
 };
+
+
+$("#appform").animatedModal({
+                	      modalTarget:'modal-02',
+	                animatedIn:'flipInY',
+	                animatedOut:'bounceOutDown',
+	                color:'rgb(51, 51, 51)',
+	                // Callbacks
+	                beforeOpen: function() {
+	                    console.log("The animation was called");
+	                },           
+	                afterOpen: function() {
+	                    console.log("The animation is completed");
+	                }, 
+	                beforeClose: function() {
+	                    console.log("The animation was called");
+	                }, 
+	                afterClose: function() {
+	                    console.log("The animation is completed");
+	                }
+});
+
+$("#image").animatedModal({
+        animatedIn:'flipInY'
+});
+
 
