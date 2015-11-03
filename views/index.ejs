@@ -21,19 +21,8 @@
 	<link rel="stylesheet" href="../public/assets/css/main.css">
 	
           <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.min.css">
-          
-          <style>
-          .addcss{
-                top: auto !important;  
-                position: absolute !important;  
-                height:100% !important;
-                z-index: 9999999 !important;
-                border-radius: 20px;		/* CSS3草案 */
-	      -webkit-border-radius: 20px;	/* Safari,Google Chrome用 */
-	      -moz-border-radius: 20px;	/* Firefox用 */
-          }
-          </style>
-          
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>          
+                    
 </head>
 
 <body class="home">
@@ -47,7 +36,7 @@
 			</div>
 			<div class="navbar-collapse collapse">
 				<ul class="nav navbar-nav pull-right">
-					<li class="active"><a href="#">Home</a></li>
+					<li class="active"><a id="home">Home</a></li>
 					<!--<li><a href="about.html">About</a></li>-->
 					<!--<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown">More Pages <b class="caret"></b></a>
@@ -56,137 +45,165 @@
 							<li class="active"><a href="sidebar-right.html">Right Sidebar</a></li>
 						</ul>
 					</li>-->
-					<li><a href="contact.html" onclick="">Application</a></li>
+					<li><a id="application">Application</a></li>
 					<!--<li><a class="btn" href="signin.html">SIGN IN / SIGN UP</a></li>-->
 				</ul>
 			</div><!--/.nav-collapse -->
 		</div>
 	</div> 
 	<!-- /.navbar -->
-
-	<!-- Header -->
-	<!-- Animation-start -->
-	<div style="margin-top:100px">	
-	        <iframe id="html5fadef91cf63f6f3badd5118db4d859bb5bc53ec8c324" src="../html5/animation/animation.html" width="100%" height="400" frameborder="0" scrolling="no" allowTransparency="true"></iframe>
-	</div>
-	<!-- /Header -->          
-        	 <div class="container text-center">
-		<h2 class=" top-space">Application Form<br>
-		参加申込フォーム</h2>
-		<br>
-                    <p class="text-muted">
-			参加していただける方は下記ボタンを押下して、参加申込フォーム <br> 
-                             を入力してください。ご協力お願いいたします。
-		</p>
-		<br>
-		<!--<form action="/appform" method="GET">
-		    <input type="submit" class="btn btn-primary btn-lg" value="APPLICATION FORM" />
-		</form>-->
-		
-		<!--Call your modal-->
-		    <a id="appform" class="btn btn-primary btn-lg" href="#modal-02">APPLICATION FORM</a>
-		
-		    <!--DEMO02-->
-        	              <div id="modal-02" class="addcss">
-	            	<!--"THIS IS IMPORTANT! to close the modal, the class name has to match the name given on the ID-->
-		            <div id="btn-close-modal closebt-container" class="close-animatedModal close-modal-02 close-lightSpeedIn">
-                                    <img id="image" class="closebt" src="../public/images/closebt.svg">
-                                </div>
-		            <!--<div  id="btn-close-modal" class="close-animatedModal close-modal-02"> 
-		                CLOSE MODAL
-		            </div>-->
-		            
-		            <div class="">
-		                    <br>
-		                   <!--Your modal content goes here-->
-		                   <form class="form-horizontal" action="/appform" method="GET">
-		                               <div class="form-group">
-					        <input type="submit" class="btn btn-primary btn-lg" value="Join with Facebook" style="background-image:linear-gradient(to bottom, #1D1D1D 0%, #1527F9 100%); !important" />
-					  </div>
-					  <div class="form-group">
-					    <label for="inputName" class="col-sm-2 control-label">Name</label>
-					    <div class="col-sm-8">
-					      <input type="Name" class="form-control" id="inputName" placeholder="Name">
-					    </div>
-					  </div>
-					  <div class="form-group">
-					    <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
-					    <div class="col-sm-8">
-					      <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
-					    </div>
-					  </div>
-					  <div class="form-group">
-					    <label for="inputPassword3" class="col-sm-2 control-label">Message</label>
-					    <div class="col-sm-8">
-					      <textarea class="form-control" rows="3"></textarea>
-					    </div>
-					  </div>
-					  <div class="form-group">
-					        <input type="submit" class="btn btn-primary btn-lg" value="APPLY" style="background-image:linear-gradient(to bottom, #1B1B1B 0%, #E6D7D7 100%); !important" />
-					  </div>
-			          </form>
-		            </div>
-		     </div>
-            </div>	
-            <!-- /container -->
-
-
-	<!-- Highlights - jumbotron -->
-	<div class="jumbotron top-space">
-		<div class="container">
-			
-			<h3 class="text-center thin">After the party</h3>
-			
-			<div class="row">
-			         <div class="col-md-3 col-sm-6 highlight">
-					<div class="h-caption"><h4><i class="fa fa-smile-o fa-5"></i>BRIDE / GROOM</h4></div>
-					<div class="h-body text-center">
-						<p>BRIDE：Risa Shimura<br>
-						GROOM：Daichi Miyajima</p>
-					</div>
-				</div>
-				<div class="col-md-3 col-sm-6 highlight">
-					<div class="h-caption"><h4><i class="fa fa-calendar fa-5"></i>Schedule</h4></div>
-					<div class="h-body text-center">
-						<p>Date:2016/02/27(Sat)<br>
-						Time:20:00~22:00</p>
-					</div>
-				</div>
-				<div class="col-md-3 col-sm-6 highlight">
-					<div class="h-caption"><h4><i class="fa fa-euro fa-5"></i>Fee</h4></div>
-					<div class="h-body text-center">
-						<p>男性：9000円<br>
-						女性：8000円<br>
-						※変動の可能性有</p>
-					</div>
-				</div>
-				<div class="col-md-3 col-sm-6 highlight">
-					<div class="h-caption"><h4><i class="fa fa-heart fa-5"></i>Place</h4></div>
-					<div class="h-body text-center">
-						<p><a href="http://restaurant.ikyu.com/101988/?ikCo=10000005&CosNo=10000005&CosUrl=http://restaurant.ikyu.com/101988/&gclid=CjwKEAjwho2xBRD0mpzUvsya6SgSJAAkRepS08kXt9U7pQQTEnL31uvr4AyAxg9oNdBLp9QEL9vdWhoCRJ3w_wcB" target="_blank">Riva degli Etruschi</a><br>
-						最寄駅：表参道 A4出口</p>
-					</div>
-				</div>
-			</div> <!-- /row  -->
-		
+		<!-- Header -->
+		<!-- Animation-start -->
+		<div style="margin-top:100px">	
+		        <iframe id="html5fadef91cf63f6f3badd5118db4d859bb5bc53ec8c324" src="../html5/animation/animation.html" width="100%" height="400" frameborder="0" scrolling="no" allowTransparency="true"></iframe>
 		</div>
-	</div>
-	<!-- /Highlights -->
-
-	<!-- container -->
+		
+	<div class="index">	
+		<!-- /Header -->          
+	        	 <div class="container text-center">
+			<h2 class=" top-space">Application Form<br>
+			参加申込フォーム</h2>
+			<br>
+	                    <p class="text-muted">
+				参加していただける方は下記ボタンを押下して、参加申込フォーム <br> 
+	                             を入力してください。ご協力お願いいたします。
+			</p>
+			<br>
+			<!--<form action="/appform" method="GET">
+			    <input type="submit" class="btn btn-primary btn-lg" value="APPLICATION FORM" />
+			</form>-->
+			
+			<!--Call your modal-->
+			    <a id="appform" class="btn btn-primary btn-lg" href="#modal-02">APPLICATION FORM</a>	
 	
- 
-         <!-- Intro -->
-	<div class="container text-center">
-		<br> <br>
-		<h2 class="thin">The best word to tell you</h2>
-		<p class="text-muted">
-			Yesterday is history, Tomorrow is mystery, and Today is a gift. <br> 
-                             That is why we call it present.
-		</p>
-	</div>
-	<!-- /Intro-->
-
+		<!-- Highlights - jumbotron -->
+		<div class="jumbotron top-space">
+			<div class="container">
+				<h3 class="text-center thin">After the party</h3>
+				<div class="row">
+				         <div class="col-md-3 col-sm-6 highlight">
+						<div class="h-caption"><h4><i class="fa fa-smile-o fa-5"></i>BRIDE / GROOM</h4></div>
+						<div class="h-body text-center">
+							<p>BRIDE：Risa Shimura<br>
+							GROOM：Daichi Miyajima</p>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-6 highlight">
+						<div class="h-caption"><h4><i class="fa fa-calendar fa-5"></i>Schedule</h4></div>
+						<div class="h-body text-center">
+							<p>Date:2016/02/27(Sat)<br>
+							Time:20:00~22:00</p>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-6 highlight">
+						<div class="h-caption"><h4><i class="fa fa-euro fa-5"></i>Fee</h4></div>
+						<div class="h-body text-center">
+							<p>男性：9000円<br>
+							女性：8000円<br>
+							※変動の可能性有</p>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-6 highlight">
+						<div class="h-caption"><h4><i class="fa fa-heart fa-5"></i>Place</h4></div>
+						<div class="h-body text-center">
+							<p><a href="http://restaurant.ikyu.com/101988/?ikCo=10000005&CosNo=10000005&CosUrl=http://restaurant.ikyu.com/101988/&gclid=CjwKEAjwho2xBRD0mpzUvsya6SgSJAAkRepS08kXt9U7pQQTEnL31uvr4AyAxg9oNdBLp9QEL9vdWhoCRJ3w_wcB" target="_blank">Riva degli Etruschi</a><br>
+							最寄駅：表参道 A4出口</p>
+						</div>
+					</div>
+				</div> <!-- /row  -->
+			</div>
+		</div>
+		<!-- /Highlights -->
+		<!-- container -->
+	         <!-- Intro -->
+		<div class="container text-center">
+			<br> <br>
+			<h2 class="thin">The best word to tell you</h2>
+			<p class="text-muted">
+				Yesterday is history, Tomorrow is mystery, and Today is a gift. <br> 
+	                             That is why we call it present.
+			</p>
+		</div>
+		
+		<section class="container-full top-space">
+	                <div id="map"></div>
+	          </section>
+		
+		<!-- /Intro-->
+                </div>
+          </div>
+          
+          
+          
+          <!-- application Form -->
+          <div class="appForm">
+          	<!-- container -->
+		<div class="container">
+			<div class="row">				
+				<!-- Article main content -->
+				<article class="col-sm-9 maincontent">
+					<header class="page-header">
+						<h1 class="page-title">Application Form</h1>
+					</header>
+					
+					<p>
+						We’d love to visit our site. Fill out the form below with some info about you and message. I look forward to seeing you.
+					</p>
+					<br>
+						<form>
+							<div class="row">
+								<div class="col-sm-4">
+									<input class="form-control" type="text" placeholder="Name">
+								</div>
+								<div class="col-sm-4">
+									<input class="form-control" type="text" placeholder="Email">
+								</div>
+								<div class="col-sm-4">
+									<input class="form-control" type="text" placeholder="Phone">
+								</div>
+							</div>
+							<br>
+							<div class="row">
+								<div class="col-sm-12">
+									<textarea placeholder="Type your message here..." class="form-control" rows="9"></textarea>
+								</div>
+							</div>
+							<br>
+							<div class="row">
+								<div class="col-sm-12">
+									<input id="send" class="btn btn-action" type="submit" value="Send message">
+								</div>
+							</div>
+							
+						</form>
+	
+				</article>
+				<!-- /Article -->
+				
+				<!-- Sidebar -->
+				<aside class="col-sm-3 sidebar sidebar-right">
+	
+					<div class="widget">
+						<h4>Address</h4>
+						<address>
+							3-21-11 Matunoki Suginami, Tokyo, Japan
+						</address>
+						<h4>Phone:</h4>
+						<address>
+							(080) 4186-8627
+						</address>
+					</div>
+	
+				</aside>
+				<!-- /Sidebar -->
+	
+			</div>
+		</div>	
+		<!-- /container -->
+          </div>
+          <!-- /application Form -->
+          
+          
 
 	<!-- Social links. @TODO: replace by link/instructions in template -->
 	<section id="social">
@@ -281,5 +298,10 @@
 	<script src="../public/assets/js/template.js"></script>
 	<script src="../public/javascripts/lib/animatedModal.min.js"></script>
 	<script src="../public/javascripts/makeown.js"></script>
+	
+	<!-- Google Maps -->
+	<script src="https://maps.googleapis.com/maps/api/js?key=&amp;sensor=false&amp;extension=.js"></script> 
+	<script src="../public/assets/js/google-map.js"></script>
+	
 </body>
 </html>

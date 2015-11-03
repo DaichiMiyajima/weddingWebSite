@@ -4,8 +4,8 @@ var map;
 
 function init() {
 	var mapOptions = {
-		center: new google.maps.LatLng(29.7063428,-95.40526,17),
-		zoom: 17,
+		center: new google.maps.LatLng(35.664565,139.715111,17),
+		zoom: 18,
 		zoomControl: true,
 		zoomControlOptions: {
 			style: google.maps.ZoomControlStyle.SMALL,
@@ -105,7 +105,13 @@ function init() {
 	var locations = [
 	
 	];
-
+          
+          var m_latlng1 = new google.maps.LatLng(35.664565,139.715111);
+          var marker1 = new google.maps.Marker({
+                position: m_latlng1,
+                map: map
+          });
+          
 	for (i = 0; i < locations.length; i++) {
 		marker = new google.maps.Marker({
 			icon: '',
