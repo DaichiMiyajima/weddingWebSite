@@ -13,7 +13,8 @@ $("#home,#footerHome").click(function () {
 });
 
 $("#sendMessage").click(function () {
-	swal({   
+	if($("#formName").val().length !=0 && $("#formEmail").val().length !=0 && $("#formPhone").val().length !=0 && $("#formMessage").val().length !=0 ){
+	    swal({   
 	    title: "Confirm",   
 	    text: "Submit to register",   
 	    type: "info",   
@@ -33,14 +34,18 @@ $("#sendMessage").click(function () {
     	            success : function(responses) {
 	                    swal("Registered!", "Your information has been registered.", "success");
                               $(".index").show();
-                              $(".appForm").hide();    
+                              $(".appForm").hide();
+                              $("[id^='form']").val("");
     	            }
     	            ,error : function(){
         
     	            }
 	        });
-	        
-	    });
+	  });
+	}else{
+	    swal("Required!", "You should input all of the items!", "error");
+	}	        
+
 });
 
 
