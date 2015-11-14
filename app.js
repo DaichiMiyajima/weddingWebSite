@@ -32,7 +32,7 @@ app.use('/public',express.static(__dirname + '/public'));
 app.use('/views/assets',express.static(__dirname + '/views/assets'));
 
 app.use('/', routes);
-app.get('/appform', appform);
+app.post('/appform', appform);
 
 
 // catch 404 and forward to error handler
