@@ -4,7 +4,19 @@ $(document).ready(function() {
 
 $("#appform,#application,#footerAppForm").click(function () {
     $(".index").hide();
-    $(".appForm").show();      	      
+    $(".appForm").show();
+    $("#facebook").show();
+    $("#notfacebook").hide();  	      
+});
+
+$("#a_notfacebook").click(function () {
+    $("#facebook").hide();     	          
+    $("#notfacebook").show();     	      
+});
+
+$("#a_facebook").click(function () {
+    $("#notfacebook").hide();  
+    $("#facebook").show();     	             	      
 });
 
 $("#home,#footerHome").click(function () {
@@ -26,6 +38,7 @@ $("#sendMessage").click(function () {
 	            url  : "/appform",
     	            type : "post",
     	            data:{
+    	                   formAttendance:$('input[name=Attendance]:checked').val(),
 			formName:$("#formName").val(),
 			formEmail:$("#formEmail").val(),
 			formPhone:$("#formPhone").val(),

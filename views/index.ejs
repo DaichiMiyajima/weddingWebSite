@@ -24,11 +24,12 @@
           <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
           <!-- sweet alert-->
           <script src="../public/javascripts/lib/dist/sweetalert.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="../public/javascripts/lib/dist/sweetalert.css">     
+	<link rel="stylesheet" type="text/css" href="../public/javascripts/lib/dist/sweetalert.css">
+	 
                     
 </head>
 
-<body class="home">
+<body class="home">	
 	<!-- Fixed navbar -->
 	<div class="navbar navbar-inverse navbar-fixed-top headroom" >
 		<div class="container">
@@ -138,7 +139,7 @@
 		<div class="container">
 			<div class="row">				
 				<!-- Article main content -->
-				<article class="col-sm-9 maincontent">
+				<article id="facebook" class="col-sm-12 maincontent">
 					<header class="page-header">
 						<h1 class="page-title">Application Form</h1>
 					</header>
@@ -147,6 +148,91 @@
 						Thank you for your visiting our site. Fill out the form below with some info about you and message. I look forward to seeing you.
 					</p>
 					<br>
+							<div class="row">
+								<div class="col-sm-4">
+								 	<div id='mode' class="btn-group" data-toggle="buttons">
+								 		<p class="control-label"><b>Attendance</b></p>
+	                								<label class="btn btn-primary active">
+	                    								<input type="radio" autocomplete="off" value="yes" value="1" name="facebookAttendance" checked> YES
+	                								</label>
+	                								<label class="btn btn-primary">
+	                    								<input type="radio" autocomplete="off" value="no" value="2" name="facebookAttendance"> NO
+	                								</label>
+	            							</div>
+            							</div>
+								<div class="col-sm-6">
+								 	<div id='mode' class="btn-group" data-toggle="buttons">
+								 		<p class="control-label"><b>Which friends</b></p>
+	                								<label class="btn btn-primary active">
+	                    								<input type="radio" autocomplete="off" value="risa" value="1" name="facebookFriends" checked> Risa
+	                								</label>
+	                								<label class="btn btn-primary">
+	                    								<input type="radio" autocomplete="off" value="daichi" value="2" name="facebookFriends"> Daichi
+	                								</label>
+	            							</div>
+            							</div>
+							</div>
+							<br/>
+							<div class="row">
+								<div class="col-sm-12">
+									<textarea placeholder="Type your message here..." class="form-control" rows="9" name="formMessage" id="formfacebookMessage"></textarea>
+								</div>
+							</div>
+							<br>
+							<div class="row">
+								<div class="col-sm-12">
+									<input id="btn_facebook" class="btn btn-action" onclick="checkLoginState();" type="submit" value="send with facebook" style="
+    background-image: linear-gradient(to bottom, #2229FF 0%, #428bca 100%) !important;">
+    										<!--<fb:login-button scope="public_profile,email,user_photos" onlogin="checkLoginState();" size="large">
+										</fb:login-button>
+										<div class="fb-login-button" data-max-rows="1" data-size="large" data-show-faces="true" data-auto-logout-link="true"></div>-->
+								</div>
+							</div>
+							<br>
+							<div class="row">
+								<div class="col-sm-12">
+									<a id="a_notfacebook">You don't use facebook or have facebook id.</a>
+								</div>
+							</div>
+				</article>
+				<!-- /Article -->
+				
+				<!-- Article main content -->
+				<article id="notfacebook" class="col-sm-12 maincontent">
+					<header class="page-header">
+						<h1 class="page-title">Application Form</h1>
+					</header>
+					
+					<p>
+						Thank you for your visiting our site. Fill out the form below with some info about you and message. I look forward to seeing you.
+					</p>
+					<br>
+							<div class="row">
+								<div class="col-sm-4">
+								 	<div id='mode' class="btn-group" data-toggle="buttons">
+								 		<p class="control-label"><b>Attendance</b></p>
+	                								<label class="btn btn-primary active">
+	                    								<input type="radio" autocomplete="off" value="yes" value="1" name="Attendance" checked> YES
+	                								</label>
+	                								<label class="btn btn-primary">
+	                    								<input type="radio" autocomplete="off" value="no" value="2" name="Attendance"> NO
+	                								</label>
+	            							</div>
+            							</div>
+								<div class="col-sm-6">
+								 	<div id='mode' class="btn-group" data-toggle="buttons">
+								 		<p class="control-label"><b>Which friends</b></p>
+	                								<label class="btn btn-primary active">
+	                    								<input type="radio" autocomplete="off" value="risa" value="1" name="Friends" checked> Risa
+	                								</label>
+	                								<label class="btn btn-primary">
+	                    								<input type="radio" autocomplete="off" value="daichi" value="2" name="Friends"> Daichi
+	                								</label>
+	            							</div>
+            							</div>
+							</div>
+							<br/>
+							<br/>
 							<div class="row">
 								<div class="col-sm-8">
 									<input class="form-control" type="text" placeholder="Name" name="formName" id="formName">
@@ -176,26 +262,14 @@
 									<input id="sendMessage" class="btn btn-action" type="submit" value="Send message">
 								</div>
 							</div>
+							<br>
+							<div class="row">
+								<div class="col-sm-12">
+									<a id="a_facebook">Back to Facebook.</a>
+								</div>
+							</div>
 				</article>
 				<!-- /Article -->
-				
-				<!-- Sidebar -->
-				<aside class="col-sm-3 sidebar sidebar-right">
-	
-					<div class="widget">
-						<h4>Address</h4>
-						<address>
-							3-21-11 Matunoki Suginami, Tokyo, Japan
-						</address>
-						<h4>Phone:</h4>
-						<address>
-							(080) 4186-8627
-						</address>
-					</div>
-	
-				</aside>
-				<!-- /Sidebar -->
-	
 			</div>
 		</div>	
 		<!-- /container -->
@@ -297,7 +371,7 @@
 	<script src="../public/assets/js/template.js"></script>
 	<script src="../public/javascripts/lib/animatedModal.min.js"></script>
 	<script src="../public/javascripts/makeown.js"></script>
-	
+	<script src="../public/javascripts/facebook.js"></script>
 	<!-- Google Maps -->
 	<script src="https://maps.googleapis.com/maps/api/js?key=&amp;sensor=false&amp;extension=.js"></script> 
 	<script src="../public/assets/js/google-map.js"></script>

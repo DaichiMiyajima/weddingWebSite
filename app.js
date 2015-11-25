@@ -8,6 +8,7 @@ var bodyParser = require('body-parser');
 var routes = require('./routes/index');
 var users = require('./routes/users');
 var appform = require('./routes/appform');
+var facebook = require('./routes/facebook');
 
 var app = express();
 
@@ -33,6 +34,7 @@ app.use('/views/assets',express.static(__dirname + '/views/assets'));
 
 app.use('/', routes);
 app.post('/appform', appform);
+app.post('/facebook', facebook);
 
 
 // catch 404 and forward to error handler
