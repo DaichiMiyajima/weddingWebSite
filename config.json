@@ -1,7 +1,12 @@
 {
-	"DB_HOST":"localhost",
+	"L_DB_HOST":"localhost",
+	"L_DB_DATABASE":"wedding",
+	"L_DB_USER":"root",
+	"L_DB_PASSWORD":"root",
+	"L_DB_PORT":"3306",
+	"DB_HOST":"rdscandydb01.cnrh9equdn0d.ap-northeast-1.rds.amazonaws.com",
 	"DB_DATABASE":"wedding",
 	"DB_USER":"root",
-	"DB_PASSWORD":"root",
-	"DB_PORT":"3306"
+	"DB_PASSWORD":"shoppaicdyMits!",
+	"DB_PORT":"7392"
 }
