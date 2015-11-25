@@ -39,6 +39,7 @@ $("#sendMessage").click(function () {
     	            type : "post",
     	            data:{
     	                   formAttendance:$('input[name=Attendance]:checked').val(),
+    	                   formFriends:$('input[name=Friends]:checked').val(),
 			formName:$("#formName").val(),
 			formEmail:$("#formEmail").val(),
 			formPhone:$("#formPhone").val(),

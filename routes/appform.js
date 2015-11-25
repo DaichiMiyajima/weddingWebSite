@@ -4,7 +4,7 @@ var mysql = require(__dirname + '/../lib/mysql.js');
 
 /* GET home page. */
 router.post('/appform', function(req, res, next) {
-    mysql.insertParticipants(req.body.formName,req.body.formEmail,req.body.formPhone,req.body.formMessage);
+    mysql.insertAttendance(req.body.formAttendance,req.body.formFriends,req.body.formName,req.body.formEmail,req.body.formPhone,req.body.formMessage,'','');
     res.render('index');
 });
 
