@@ -52,7 +52,7 @@ $("#sendMessage").click(function () {
                               $("[id^='form']").val("");
     	            }
     	            ,error : function(){
-        
+                              swal("Error!", "Error!", "error");
     	            }
 	        });
 	  });

@@ -70,7 +70,6 @@
     // successful.  See statusChangeCallback() for when this call is made.
     var profileAPI = function(aCallback) {
         FB.api('/me' , { fields: 'id,name,gender,email'},  function(response) {
-            console.log('profile:'+JSON.stringify(response));
             aCallback(response);
         });
      }
@@ -79,7 +78,6 @@
         FB.api("/me/picture",function (response) {
             if (response && !response.error) {
                 /* handle the result */
-                console.log('att:'+$('input[name=facebookAttendance]:checked').val());
                 $.ajax({
 	            url  : "/facebook",
     	            type : "post",
