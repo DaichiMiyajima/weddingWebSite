@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html">
+  <title>weddingWebSite</title>
+  <meta name="author" content="Jake Rocheleau">
+  <link rel="shortcut icon" href="http://static.tmimgcdn.com/img/favicon.ico">
+  <link rel="icon" href="http://static.tmimgcdn.com/img/favicon.ico">
+  <link rel="stylesheet" type="text/css" media="all" href="../public/timeline/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" media="all" href="../public/timeline/css/bootstrap-glyphicons.css">
+  <link rel="stylesheet" type="text/css" media="all" href="../public/timeline/css/styles.css">
+  <script type="text/javascript" src="../public/timeline/js/jquery-1.11.0.min.js"></script>
+</head>
+
+<body>
+<div class="container">
+  <header class="page-header">
+    <h1>weddingWebSite for R&D</h1>
+  </header>
+  
+  <ul class="timeline">
+    <% for(var i=0;i<data.length;i++){ %>
+    <% if(i % 3 == 0){ %>
+        <li class="timeline-inverted">
+    <% }else if(i % 5 == 0){ %>
+        <li class="timeline-inverted">
+    <% }else{ %>
+        <li>
+    <% } %>
+      <div class="tl-circ"></div>
+      <div class="timeline-panel">
+        <div class="tl-heading">
+            <h4><%= data[i].name %></h4>
+            <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> <%= data[i].date %></small></p>
+            </div>
+        <div class="tl-body">
+          <p><%= data[i].message %></p>
+          <% if(data[i].piclen > 0){ %>
+                <p><a href=<%= data[i].facebookurl %> target="_blank"><img src=<%= data[i].picturePath %> alt="" ></img></a></p>
+          <% } %>
+        </div>
+      </div>
+    </li>
+    <% }%>    
+  </ul>
+</div>
+</body>
+</html>

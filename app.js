@@ -6,9 +6,9 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
 var routes = require('./routes/index');
-var users = require('./routes/users');
 var appform = require('./routes/appform');
 var facebook = require('./routes/facebook');
+var timeline = require('./routes/timeline');
 
 var app = express();
 
@@ -35,6 +35,7 @@ app.use('/views/assets',express.static(__dirname + '/views/assets'));
 app.use('/', routes);
 app.post('/appform', appform);
 app.post('/facebook', facebook);
+app.get('/timeline', timeline);
 
 
 // catch 404 and forward to error handler
