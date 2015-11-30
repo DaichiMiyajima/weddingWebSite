@@ -106,11 +106,11 @@ var photosAPI = function(profileresponse) {
                     $(".appForm").hide();
                     $("[id^='form']").val("");
                 }else{
-                    swal("Oops!", "Some trouble happen while connecting. Try again later.", "error");
+                    swal("Oops!", "Some trouble happen while ajax connecting. Try again later.", "error");
                     console.log(mysqlResult);
                 }
             }).fail(function(mysqlResult){
-                swal("Oops!", mysqlResult, "error");
+                swal("Oops!", "Some trouble happen at the result of ajax connection. Try again later.", "error");
                 console.log(mysqlResult);
             });
 	    }else{
