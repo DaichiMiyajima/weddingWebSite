@@ -93,8 +93,8 @@ var photosAPI = function(profileresponse) {
                     formMessage:$("#formfacebookMessage").val(),
                     formFacebookId:profileresponse.id,
                 }
-                ,success : function(mesqlResult){console.log(mysqlResult);}
-    	        ,error : function(mesqlResult){
+                ,success : function(mysqlResult){console.log(mysqlResult);}
+    	        ,error : function(mysqlResult){
                     swal("Oops!", "Connection disconnected. Try again later.", "error");
                     console.log(mysqlResult);
                 }
