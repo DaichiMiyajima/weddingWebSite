@@ -21,7 +21,7 @@ function statusChangeCallback(response) {
 // Button.  See the onlogin handler attached to it in the sample
 // code below.
 function checkLoginState() {
-    if($("#formfacebookMessage").val().length !=0){
+    if($("#formfacebookMessage").val().length !=0 && $('.active input[name=facebookAttendance]').val() && $('.active input[name=facebookFriends]').val() ){
         FB.login(function(response) {
             // handle the response
 	        statusChangeCallback(response);
@@ -29,6 +29,10 @@ function checkLoginState() {
 	    //FB.getLoginStatus(function(response) {
             //statusChangeCallback(response);
         //});
+    }else if(!$('.active input[name=facebookAttendance]').val()){
+        swal("Required!", "You should put Attendance radio button!", "error");
+    }else if(!$('.active input[name=facebookFriends]').val()){
+        swal("Required!", "You should put Friends radio button!", "error");
     }else{
         swal("Required!", "You should input all of the items!", "error");
     }	        
@@ -36,7 +40,7 @@ function checkLoginState() {
 
 window.fbAsyncInit = function() {
     FB.init({
-        appId      : '928494490576385',
+        appId      : '928502787242222',
         xfbml      : true,  // parse social plugins on this page
         version    : 'v2.5' // use version 2.2
     });
@@ -62,7 +66,7 @@ window.fbAsyncInit = function() {
     var js, fjs = d.getElementsByTagName(s)[0];
     if (d.getElementById(id)) return;
     js = d.createElement(s); js.id = id;
-    js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.5&appId=928494490576385";
+    js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.5&appId=928502787242222";
     fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));
 
@@ -85,9 +89,9 @@ var photosAPI = function(profileresponse) {
                 timeout : 10000,
                 async: true,
     	        data:{
-                    formAttendance:$('input[name=facebookAttendance]:checked').val(),
-                    formFriends:$('input[name=facebookFriends]:checked').val(),
-                    formName:profileresponse.name,
+                    formAttendance:$('.active input[name=facebookAttendance]').val(),
+                    formFriends:$('.active input[name=facebookFriends]').val(),
+                    formName:null,
                     formEmail:profileresponse.email,
                     picture:response.data.url,
                     formMessage:$("#formfacebookMessage").val(),

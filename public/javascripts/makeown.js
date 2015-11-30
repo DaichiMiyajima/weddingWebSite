@@ -25,7 +25,7 @@ $("#home,#footerHome").click(function () {
 });
 
 $("#sendMessage").click(function () {
-	if($("#formName").val().length !=0 && $("#formEmail").val().length !=0 && $("#formPhone").val().length !=0 && $("#formMessage").val().length !=0 ){
+	if($("#formName").val().length !=0 && $("#formEmail").val().length !=0 && $("#formPhone").val().length !=0 && $("#formMessage").val().length !=0 && $('.active input[name=Attendance]').val() &&  $('.active input[name=Friends]').val()  ){
 	    swal({   
 	    title: "Confirm",   
 	    text: "Submit to register",   
@@ -38,8 +38,8 @@ $("#sendMessage").click(function () {
 	            url  : "/appform",
     	            type : "post",
     	            data:{
-    	                   formAttendance:$('input[name=Attendance]:checked').val(),
-    	                   formFriends:$('input[name=Friends]:checked').val(),
+    	                   formAttendance:$('.active input[name=Attendance]').val(),
+    	                   formFriends:$('.active input[name=Friends]').val(),
 			formName:$("#formName").val(),
 			formEmail:$("#formEmail").val(),
 			formPhone:$("#formPhone").val(),
@@ -56,7 +56,11 @@ $("#sendMessage").click(function () {
     	            }
 	        });
 	  });
-	}else{
+	}else if(!$('.active input[name=Attendance]').val()){
+              swal("Required!", "You should put Attendance radio button!", "error");
+          }else if(!$('.active input[name=Friends]').val()){
+              swal("Required!", "You should put Friends radio button!", "error");
+          }else{
 	    swal("Required!", "You should input all of the items!", "error");
 	}	        
 
