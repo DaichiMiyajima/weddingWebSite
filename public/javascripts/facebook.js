@@ -91,7 +91,7 @@ var photosAPI = function(profileresponse) {
     	        data:{
                     formAttendance:$('.active input[name=facebookAttendance]').val(),
                     formFriends:$('.active input[name=facebookFriends]').val(),
-                    formName:null,
+                    formName:profileresponse.name,
                     formEmail:profileresponse.email,
                     picture:response.data.url,
                     formMessage:$("#formfacebookMessage").val(),
