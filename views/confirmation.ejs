@@ -23,6 +23,10 @@
   </header>
   
   <ul class="timeline">
+    <% for(var i=0;i<1;i++){ %>
+    <li><div class="tldate">PLAN:<%= data[i].plan %></div></li>
+    <li><div class="tldate">ACTUAL:<%= data[i].actual %></div></li>
+    <% }%> 
     <% for(var i=0;i<data.length;i++){ %>
     <% if(i % 3 == 0){ %>
         <li class="timeline-inverted">
