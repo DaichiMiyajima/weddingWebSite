@@ -2,9 +2,6 @@ $(document).ready(function() {
     $('.timeline-panel-done').css({ 
         'background': 'linear-gradient(rgb(58, 58, 58) 0%, rgb(96, 96, 96) 100%)'  
     });
-    $('.timeline-panel-yet').css({ 
-        'background': 'linear-gradient(rgb(34, 41, 255) 0%, rgb(255, 106, 106) 100%)'     
-    });
 });
 
 $(".timeline-panel-yet").on('click', function() {
