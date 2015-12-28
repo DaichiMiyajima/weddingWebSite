@@ -11,7 +11,7 @@ $(".timeline-panel-yet").on('click', function() {
         swal("Required!", "You should input all of the items!", "error");	        
 });
 
-function confY(id){
+function confY(id,name){
             swal({   
 	    title: "Confirm",   
 	    text: name + "：return to original?",   
