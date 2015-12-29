@@ -26,6 +26,7 @@ $("#home,#footerHome").click(function () {
 
 $("#sendMessage").click(function () {
 	if($("#formName").val().length !=0 && $("#formEmail").val().length !=0 && $("#formPhone").val().length !=0 && $("#formMessage").val().length !=0 && $('.active input[name=Attendance]').val() &&  $('.active input[name=Friends]').val()  ){
+	    var name = $("#formName").val() + " " + $("#formNameLast").val()
 	    swal({   
 	    title: "Confirm",   
 	    text: "Submit to register",   
@@ -40,7 +41,7 @@ $("#sendMessage").click(function () {
     	            data:{
     	                   formAttendance:$('.active input[name=Attendance]').val(),
     	                   formFriends:$('.active input[name=Friends]').val(),
-			formName:$("#formName").val(),
+			formName:name,
 			formEmail:$("#formEmail").val(),
 			formPhone:$("#formPhone").val(),
 			formMessage:$("#formMessage").val()
