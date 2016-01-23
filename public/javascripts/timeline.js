@@ -21,7 +21,8 @@ function initTimelinePlugins(){
                 remarksPos.push(0);
                 // push all remarks height
                 $.each(remarks,function(){
-                    remarksPos.push(this.offsetTop);
+                    // consider header height
+                    remarksPos.push(this.offsetTop + $('header').outerHeight(true));
                 });
 
                 // scroll every three sec. go to top if final remarks is shown
