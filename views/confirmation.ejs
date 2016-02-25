@@ -36,7 +36,7 @@
         <li>
     <% } %>
       <input type="hidden" name="confirmation" value=<%= data[i].confirmation %>></input>
-      <div class="tl-circ"></div>
+      <div class="tl-circ"><%= data[i].team %></div>
       <% if( data[i].confirmation == "yet"){ %>
         <div class="timeline-panel timeline-panel-yet" onclick='confD(<%= data[i].id %>,"<%= data[i].nm %>")'>
       <% }else{ %>
@@ -44,14 +44,17 @@
       <% } %>
 
             <div class="tl-heading">
+             <div class="inf">
                 <h4><%= data[i].name %></h4>
+             </div>
                 <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> <%= data[i].date %></small></p>
                 </div>
             <div class="tl-body">
             <p><%= data[i].message %></p>
             <% if(data[i].piclen > 0){ %>
-                    <p><a href=<%= data[i].facebookurl %> target="_blank"><img src=<%= data[i].picturePath %> alt="" ></img></a></p>
+                    <p><img src=<%= data[i].picturePath %> alt="" ></img></p>
             <% } %>
+            
             </div>
         </div>
     </li>
