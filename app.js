@@ -9,6 +9,7 @@ var routes = require('./routes/index');
 var appform = require('./routes/appform');
 var facebook = require('./routes/facebook');
 var timeline = require('./routes/timeline');
+var message = require('./routes/message');
 var confirmation = require('./routes/confirmation');
 
 var app = express();
@@ -37,6 +38,7 @@ app.use('/', routes);
 app.post('/appform', appform);
 app.post('/facebook', facebook);
 app.get('/timeline', timeline);
+app.get('/message', message);
 app.get('/confirmation', confirmation);
 app.post('/conf', confirmation);
 app.listen(8080);

@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html">
+  <title>weddingWebSite</title>
+  <meta name="author" content="Jake Rocheleau">
+  <link rel="shortcut icon" href="../public/assets/images/gt_favicon.png">
+  <link rel="stylesheet" type="text/css" media="all" href="../public/timeline/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" media="all" href="../public/timeline/css/bootstrap-glyphicons.css">
+  <link rel="stylesheet" type="text/css" media="all" href="../public/timeline/css/styles.css">
+  <script type="text/javascript" src="../public/timeline/js/jquery-1.11.0.min.js"></script>
+  <!-- sweet alert-->
+  <script src="../public/javascripts/lib/dist/sweetalert.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../public/javascripts/lib/dist/sweetalert.css">
+  <script src="../public/javascripts/confirmation.js"></script>
+  <link rel="shortcut icon" href="../public/assets/images/gt_favicon.png">
+
+        
+          
+	<!-- Custom styles for our template -->
+	<link rel="stylesheet" href="../public/assets/css/bootstrap-theme.css" media="screen" >
+	<link rel="stylesheet" href="../public/assets/css/main.css">
+	
+          <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.min.css">
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+          <!-- sweet alert-->
+          <script src="../public/javascripts/lib/dist/sweetalert.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="../public/javascripts/lib/dist/sweetalert.css">
+	 <style type="text/css">
+		.form-control
+		{
+			font-size: 16px ;
+		}
+	</style>
+</head>
+
+<body class="home">
+<!-- Fixed navbar -->
+	<div class="navbar navbar-inverse navbar-fixed-top headroom" >
+		<div class="container">
+			<div class="navbar-header">
+				<!-- Button for smallest screens -->
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+				<a class="navbar-brand"><img src="../public/assets/images/logo.png" alt="Progressus HTML5 template">  R&D</a>
+			</div>
+			<div class="navbar-collapse collapse">
+				<ul class="nav navbar-nav pull-right">
+					<li><a id="home" href="./">Home</a></li>
+					<li class="active" ><a id="message" href="./message">Message</a></li>
+				</ul>
+			</div>
+			<!--/.nav-collapse -->
+		</div>
+	</div> 
+	<!-- /.navbar -->
+<div class="container">
+  <ul class="timeline" style="margin-top: 100px;z-index: 1;">
+    <% for(var i=0;i<data.length;i++){ %>
+    <% if(i % 3 == 0){ %>
+        <li class="timeline-inverted">
+    <% }else if(i % 5 == 0){ %>
+        <li class="timeline-inverted">
+    <% }else{ %>
+        <li>
+    <% } %>
+      <input type="hidden" name="confirmation" value=<%= data[i].confirmation %>></input>
+      <div class="tl-circ"><%= data[i].team %></div>
+      <% if( data[i].confirmation == "yet"){ %>
+        <div class="timeline-panel timeline-panel-yet","<%= data[i].nm %>")'>
+      <% }else{ %>
+        <div class="timeline-panel timeline-panel-done","<%= data[i].nm %>")'>
+      <% } %>
+
+            <div class="tl-heading">
+             <div class="inf">
+                <h4><%= data[i].name %></h4>
+             </div>
+                <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> <%= data[i].date %></small></p>
+                </div>
+            <div class="tl-body">
+            <p><%= data[i].message %></p>
+            <% if(data[i].piclen > 0){ %>
+                    <p><img src=<%= data[i].picturePath %> alt="" ></img></p>
+            <% } %>
+            
+            </div>
+        </div>
+    </li>
+    <% }%>    
+  </ul>
+</div>
+    	<!-- JavaScript libs are placed at the end of the document so the pages load faster -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+	<script src="../public/assets/js/headroom.min.js"></script>
+	<script src="../public/assets/js/jQuery.headroom.min.js"></script>
+	<script src="../public/assets/js/template.js"></script>
+	<script src="../public/javascripts/lib/animatedModal.min.js"></script>
+</body>
+</html>
