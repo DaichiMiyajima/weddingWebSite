@@ -1,6 +1,6 @@
 $(document).ready(function() {
     $('.timeline-panel-done').css({ 
-        'background': 'linear-gradient(rgb(58, 58, 58) 0%, rgb(96, 96, 96) 100%)'  
+        'background': 'linear-gradient(rgb(255, 253, 254) 0%, rgb(93, 129, 228) 100%)'  
     });
 });
 
@@ -15,6 +15,7 @@ function confY(id,name){
 	    type: "info",   
 	    showCancelButton: true,   
 	    closeOnConfirm: false,   
+	    confirmButtonText: "Yes, delete it!",
 	    showLoaderOnConfirm: true, 
 	    }, function(){
 	        $.ajax({
@@ -62,4 +63,6 @@ function confD(id,name){
 	        });
 	  });
 }
+
+
 
